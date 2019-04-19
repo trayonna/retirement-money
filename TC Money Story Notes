@@ -1,0 +1,21 @@
+capture current age
+capture retirement age
+
+retirement - age = t
+
+capture principal = (savings + investments + social security)
+
+capture interest rate on savings account
+capture how often it compounds (monthly = 12, annually = 1)
+capture gender (get life expectancy for male/female)
+capture monthly expenses
+
+money needed = ((expectancy - retirement) * 12) * monthly expenses
+
+let amount = (Principal * (1 + (interest rate / number of times it compounds)));
+amount = Math.pow(amount, number of times it compounts)
+amount = Math.pow(amount, (retirement - age));
+
+if(amount >= money needed){
+you're golden
+}
