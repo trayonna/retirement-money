@@ -1,20 +1,40 @@
-$("body").on("click", ".start-btn,.steps-btn", function (e) { //note this captures click on either the start button or path buttons
-	e.preventDefault(); //have to add this so we don't get weird behavior in older browsers (or IE)
-	const myPath = $(this), // this button clicked,
-		mySlide = myPath.data('id'), //grab id info in the data attribute data-id
-		mySlideBackground = mySlide + "-background", //convert to backgroud id
-		mySlideColor = myPath.data('color'); //grab color in data attribute data-color
-	console.log(mySlide);
-	console.log(mySlideBackground);
-	console.log(mySlideColor);
-	// $("#your-dwelling, #your-dwelling-background").addClass("active").css("background-color", mySlideColor);
-	// $(`#${mySlideBackground}, #${mySlide}`).addClass('active').css("background-color", mySlideColor);
-	$("#" + mySlideBackground).addClass('active').css("background-color", mySlideColor); // "#" + needed to add id symbol
-	$("#" + mySlide).addClass('active').css("background-color", mySlideColor); // "#" + needed to add id symbol
-	$('html, body').animate({ //start animate to slide down smoothly
-		scrollTop: $("#" + mySlideBackground).offset().top //grabs slide id and scrolls
-	}, 400); //400 is milliseconds; the bigger the number, the slower the scroll
-}); // closes click related functions or events
+$("body").on("click", ".start-btn", function (e) {
+	e.preventDefault();
+
+	const myPath = $(this);
+	mySlide = myPath.data('id'),
+		mySlideBackground = mySlide + "-background";
+
+	$("#" + mySlideBackground).addClass('active');
+	$("#" + mySlide).addClass('active');
+
+	$('html, body').animate({
+		scrollTop: $("#" + mySlideBackground).offset().top
+	}, 400);
+});
+
+
+
+// Java Script code fom personalized stepper below
+// $("body").on("click", ".start-btn,.steps-btn", function (e) { //note this captures click on either the start button or path buttons
+//e.preventDefault(); //have to add this so we don't get weird behavior in older browsers (or IE)
+//	const myPath = $(this), // this button clicked,
+//		mySlide = myPath.data('id'), //grab id info in the data attribute data-id
+//		mySlideBackground = mySlide + "-background", //convert to backgroud id
+//		mySlideColor = myPath.data('color'); //grab color in data attribute data-color
+//	console.log(mySlide);
+//	console.log(mySlideBackground);
+//	console.log(mySlideColor);
+// $("#your-dwelling, #your-dwelling-background").addClass("active").css("background-color", mySlideColor);
+// $(`#${mySlideBackground}, #${mySlide}`).addClass('active').css("background-color", mySlideColor);
+//	$("#" + mySlideBackground).addClass('active').css("background-color", mySlideColor); // "#" + needed to add id symbol
+//	$("#" + mySlide).addClass('active').css("background-color", mySlideColor); // "#" + needed to add id symbol
+//	$('html, body').animate({ //start animate to slide down smoothly
+//		scrollTop: $("#" + mySlideBackground).offset().top //grabs slide id and scrolls
+//	}, 400); //400 is milliseconds; the bigger the number, the slower the scroll
+// }); // closes click related functions or events
+
+// More Java Script code from personalized stepper below
 
 // return to return to top
 $("body").on("click", ".restart-btn", function (e) {
@@ -29,3 +49,5 @@ function scrollyUp() {
 		scrollTop: $(".intro").offset().top + "px"
 	});
 }
+
+//code for calculator to work

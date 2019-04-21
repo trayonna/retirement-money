@@ -14,7 +14,7 @@
 
     <!-- Your styles should be called here -->
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,7 +32,7 @@
       <!-- The background photo is in the stylesheet -->
       <div class="image">
         <div class="section-wrap">
-          <h1 class="landing-page">Are you green lit for retirement and current cost efficient living?<span class="subhead">
+          <h1 class="landing-page">Are you green lit for retirement?<span class="subhead">
             </span></h1>
 
           <!-- <span class="intro-text"> -->
@@ -41,35 +41,51 @@
               Monthly rent, utilities, insurance, and personal expenses can add up. Depending on where you live and whether or not you have a job with a rewarding salary, saving money can be hard for you. Eventually, you won’t be able to or want to
               work-- will you have enough money saved to retire comfortably?
             </p>
-            <p>The following calculator will tell you whether or not you can hang up your cape and retire. </p>
-
-
-            <!--Here is the simple receipt style set up for the calculator remember onclick to figure out what is happening when we click-->
-            <form name="formcalc">
-              Monthly Income: <input type="number" id="num1" placeholder="$/month">
-              <br>
-              Monthly Expenses: <input type="number" id="num2" placeholder="$/month">
-              <br>
-              Social Security: <input type="number" id="num3" placeholder="$/month">
-              <br>
-              Retirement Savings: <input type="number" id="num4" placeholder="$/month">
-              <br>
-              <p></p>
-              <input type="button" value="Calculate" onclick="output();">
-              <p></p>
-              Result: <input type="number" id="numres">
+            <p class="byline"> By Trayonna Hendricks & LaCandis Brown </p>
+            <form>
+              <input type="button" id="start" class="start-btn" value="Enter" id="familyYes_btn" data-id="your-dwelling" />
             </form>
-            <p>The U.S. Census Bureau found that the national average retirement age is 63, but it's important to note that the minimum age to collect Social Security and Medicaire benefits is 65. </p>
           </div>
-          <!-- </span> -->
-          <!-- <input type="button" id="go" value="Go Now" /> -->
-          <form>
-            <!-- Code for first button below
-           <input type="button" id="start" class="start-btn" value="Click To Calculate" id="familyYes_btn" data-id="your-dwelling" data-color="#BF7530" /> -->
-          </form>
         </div>
       </div>
-      <!-- end section-wrap-->
+      <!-- end section wrap-->
+      <div class="intro hide" id="your-dwelling-background">
+        <section class="intro hide" id="your-dwelling">
+          <p>
+            Monthly rent, utilities, insurance, and personal expenses can add up. Depending on where you live and whether or not you have a job with a rewarding salary, saving money can be hard for you. Eventually, you won’t be able to or want to
+            work-- will you have enough money saved to retire comfortably?
+          </p>
+          <p>The following calculator will tell you whether or not you can hang up your cape and retire. </p>
+
+
+
+
+          <!--Here is the simple receipt style set up for the calculator remember onclick to figure out what is happening when we click-->
+          <form name="formcalc">
+            Monthly Income: <input type="number" id="num1" placeholder="$/month">
+            <br>
+            Monthly Expenses: <input type="number" id="num2" placeholder="$/month">
+            <br>
+            Social Security: <input type="number" id="num3" placeholder="$/month">
+            <br>
+            Retirement Savings: <input type="number" id="num4" placeholder="$/month">
+            <br>
+            <p></p>
+            <input type="button" value="Calculate" onclick="output();">
+            <p></p>
+            Result: <input type="number" id="numres">
+          </form>
+          <p>The U.S. Census Bureau found that the national average retirement age is 63, but it's important to note that the minimum age to collect Social Security and Medicaire benefits is 65. </p>
+      </div>
+      <!-- </span> -->
+      <!-- <input type="button" id="go" value="Go Now" /> -->
+      <form>
+        <!-- Code for first button below
+           <input type="button" id="start" class="start-btn" value="Click To Calculate" id="familyYes_btn" data-id="your-dwelling" data-color="#BF7530" /> -->
+      </form>
+    </div>
+    </div>
+    <!-- end section-wrap-->
     </div>
     <!-- Closes div class landing-->
 
