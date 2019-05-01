@@ -32,8 +32,10 @@
       <!-- The background photo is in the stylesheet -->
       <div class="image">
         <div class="section-wrap">
-          <h1 class="landing-page">Are you green lit for retirement?<span class="subhead">
-            </span></h1>
+          <h1 class="landing-page">
+            Are you green lit for retirement?
+            <span class="subhead"></span>
+          </h1>
 
           <!-- <span class="intro-text"> -->
           <div class="billboard-text">
@@ -70,10 +72,14 @@
             <br>
             Retirement Savings: <input type="number" id="num4" placeholder="$/month">
             <br>
+            Investments: <input type="number" id="num5" placeholder="$/month">
+            <br>
             <p></p>
-            <input type="button" value="Calculate" onclick="output();">
+            <input type="button" value="Calculate">
             <p></p>
-            Result: <input type="number" id="numres">
+            <div id="result">
+              Result: <span></span>
+            </div>
           </form>
           <p>The U.S. Census Bureau found that the national average retirement age is 63, but it's important to note that the minimum age to collect Social Security and Medicaire benefits is 65. </p>
       </div>

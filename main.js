@@ -51,3 +51,32 @@ function scrollyUp() {
 }
 
 //code for calculator to work
+$("body").on("keyup keydown keypress change", "input", function (e) {
+	const monthly_income = parseFloat($("#num1").val()),
+		monthly_expenses = parseFloat($("#num2").val()),
+		social_security = parseFloat($("#num3").val()),
+		retirement_savings = parseFloat($("#num4").val()),
+		investments_yield = parseFloat($("#num5").val());
+
+
+	if (!isNaN(monthly_income) && !isNaN(monthly_expenses) && !isNaN(social_security) && !isNaN(retirement_savings) && !isNaN(investments_yield)) {
+		const pre_retirement = monthly_income - monthly_expenses,
+			post_retirement = (social_security + retirement_savings + investments_yield) - monthly_expenses;
+
+		let response = "";
+		if (pre_retirement <= post_retirement) {
+			response = "You are ok to retire";
+			$("#result").removeClass("red");
+		} else {
+			response = "Don't retire yet... more $$$ is needed";
+			$("#result").addClass("red");
+		}
+
+		console.log("response", response);
+		$("#result span").text(response);
+	} else {
+		console.log("Something is not a number");
+	}
+
+
+});

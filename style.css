@@ -90,6 +90,10 @@ max-width: 800px;
     left: 10%;
 }
 
+.red {
+    color: rgba(255, 0, 0, 1);
+}
+
 /* styling for headlines and subheads and text on landing page */
 .landing-page {
     font-size: 2em;
